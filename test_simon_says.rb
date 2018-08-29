@@ -24,13 +24,14 @@ class TestSimonSays < MiniTest::Test
   end
 
   def test_start_of_word_returns_first_letter
-    assert_equal "h", start_of_word("hello", 1)
+    assert_equal "h", start_of_word("hello", 0)
+    # Arrays start with 0
   end
 
   def test_start_of_word_returns_first_two_letters
-    assert_equal "Bo", start_of_word("Bob", 2)
+    assert_equal "Bo", start_of_word("Bob", 0..1)
   end
-  
+
   def test_first_word
     assert_equal "Hello", first_word("Hello World")
   end
